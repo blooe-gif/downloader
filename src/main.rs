@@ -1,14 +1,5 @@
-mod adaptive;
-mod ai;
-mod config;
-mod dashboard;
-mod db;
-mod engine;
-mod fileio;
-mod models;
-mod queue;
-
 use clap::{Parser, Subcommand};
+use idm_rs::{ai, config, db, engine};
 use sqlx::SqlitePool;
 use std::{collections::HashMap, path::PathBuf};
 

@@ -6,22 +6,30 @@
     <title>IDM-RS</title>
     <style>
       body { background:#0f172a; color:#e2e8f0; font-family:Segoe UI, sans-serif; margin:0; }
-      .card{ max-width:760px; margin:48px auto; padding:24px; background:#111827; border-radius:14px; }
+      .card{ max-width:960px; margin:40px auto; padding:24px; background:#111827; border-radius:14px; }
       input,button{ padding:10px 12px; border-radius:8px; border:1px solid #334155; background:#1e293b; color:#e2e8f0; }
       button{ background:#2563eb; border:0; cursor:pointer; }
       .row{ display:flex; gap:10px; }
-      #log{ margin-top:16px; white-space:pre-wrap; color:#93c5fd; }
+      table{ width:100%; margin-top:16px; border-collapse:collapse; }
+      th,td{ text-align:left; padding:8px; border-bottom:1px solid #1f2937; font-size:13px; }
+      #status{ margin-top:12px; color:#93c5fd; }
     </style>
   </head>
   <body>
     <div class="card">
       <h1>IDM-RS Download Accelerator</h1>
-      <p>Clean Tauri shell for queue submission and telemetry.</p>
       <div class="row">
         <input id="url" style="flex:1" placeholder="https://example.com/file.iso" />
-        <button id="btn">Queue</button>
+        <input id="out" style="width:200px" placeholder="optional file name" />
+        <button id="queue">Queue</button>
+        <button id="run">Run Next</button>
+        <button id="refresh">Refresh</button>
       </div>
-      <div id="log">Ready.</div>
+      <div id="status">Ready.</div>
+      <table>
+        <thead><tr><th>ID</th><th>Status</th><th>Priority</th><th>Size(MB)</th><th>Path</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

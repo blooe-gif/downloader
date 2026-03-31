@@ -37,3 +37,21 @@ Copy `idm.example.toml` to `idm.toml` and tune values.
 - `src/ai.rs`: local lightweight embeddings/scoring utilities
 - `src/queue.rs`: prioritized queue + dead-letter path
 
+
+## GUI (Tauri)
+
+```bash
+cd tauri-ui
+npm install
+npm run dev
+npm run tauri dev
+```
+
+Build MSI on Windows:
+
+```bash
+cd tauri-ui
+npm install
+npm run build
+npm run tauri build
+```
