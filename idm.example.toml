@@ -1,0 +1,16 @@
+db_path = "idm_state.sqlite"
+download_dir = "downloads"
+max_connections = 32
+base_connections = 8
+min_connections = 2
+chunk_size_mb = 8
+request_delay_ms = 0
+max_retries = 8
+
+user_agents = [
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+  "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
+]
+
+# Optional HTTP/SOCKS5 proxies.
+proxies = []
